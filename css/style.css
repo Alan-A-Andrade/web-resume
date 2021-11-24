@@ -1,0 +1,335 @@
+
+
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("../assets/font/JetBrainsMono/webfonts/JetBrainsMono-Light.woff2") format("woff2");
+
+  font-style: normal;
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("../assets/font/JetBrainsMono/webfonts/JetBrainsMono-LightItalic.woff2") format("woff2");
+
+  font-style: italic;
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("../assets/font/JetBrainsMono/webfonts/JetBrainsMono-Regular.woff2") format("woff2");
+
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("../assets/font/JetBrainsMono/webfonts/JetBrainsMono-Italic.woff2") format("woff2");
+
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("../assets/font/JetBrainsMono/webfonts/JetBrainsMono-Bold.woff2") format("woff2");
+
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("../assets/font/JetBrainsMono/webfonts/JetBrainsMono-BoldItalic.woff2") format("woff2");
+
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+html{
+  font-family: 'JetBrainsMono';
+  font-size: 12px;
+  font-style: normal;
+}
+
+body {
+  background-color: #fafafa;
+  border-color: white;
+  font-size: 25px;
+  display: flex;
+  z-index: -15;
+}
+
+
+
+.dark-mode {
+  background-color: #121212;
+  color: #fafafa;
+}
+
+.theme{
+  background-color: #C22250 ;
+  color: #121212 ;
+}
+
+header{
+  position: fixed;
+  width: 100vw;
+  top: 0vh;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+
+  z-index: 50;
+}
+
+header button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  aspect-ratio: 1/1;
+  border: transparent;
+  border-radius: 20%;
+  color: inherit;
+  background-color: inherit;
+
+}
+
+header button ion-icon{
+  font-size: 2rem;
+}
+
+
+nav{
+  height: 100vh;
+  width: 5rem;
+
+  
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+
+  position: fixed;
+}
+
+
+nav ion-icon{
+  font-size: 2.5rem;
+  color: white;
+
+  padding: 0.5rem;
+}
+
+nav>ion-icon{
+  width: 4rem;
+  height: 4rem;
+  font-size: 3rem;
+--ionicon-stroke-width: 2rem;
+  color: #1C1F2B;
+  background-color: #C22250;
+
+}
+
+
+nav .wrapper{
+  width: 100%;
+  flex-grow: 3;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  }
+
+
+
+figure{
+  width: 24rem;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  left: 5rem;
+  z-index: 10;
+
+  
+}
+
+.selected{
+  color: #C22250;
+}
+
+.avatar{
+  width: 250%;
+  position: absolute;
+  left: -75%;
+  bottom: -5vw;
+
+  
+}
+
+.bg-avatar{
+  position: absolute;
+  height: 100vh;
+  left: -100%;
+  bottom: 20%;
+
+
+}
+
+.hover{
+  box-shadow: 0px 0.2rem 5px 0.5rem rgba(0,0,0,0.3);
+	transform: scale(1);
+	transition: 0.5s ease-in-out;
+}
+.hover:hover{
+  box-shadow: 0px 0.2rem 5px 1.5rem rgba(0,0,0,0.3);
+	transform: scale(1.05);
+}
+
+.hover .avatar{
+	transform: scale(1);
+  transition: 0.5s ease-in-out;
+}
+
+.hover .avatar:hover{
+	transform: scale(0.90);
+
+}
+
+.hover .bg-avatar{
+	transform: scale(1);
+  transition: 0.5s ease-in-out;
+}
+
+.hover:hover .bg-avatar{
+	transform: scale(1.1);
+  left: -100%;
+  bottom: 20%;
+}
+
+
+
+
+main{
+  width: calc(100vw - 30rem);
+  height: 100vh;
+  padding: 3rem 1.2rem 3rem 1.2rem;
+  margin-right: 4rem;
+
+  position: fixed;
+  left: 29rem;
+  z-index: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  overflow: scroll;
+  
+
+}
+
+
+.about-me h1{
+  font-size: 6rem;
+  line-height: 4rem;
+  padding: 1.5rem 0rem;
+}
+
+.about-me h2{
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  padding: 2rem 0rem;
+  font-weight: lighter;
+}
+
+.about-me span{
+ color: #C22250;
+
+}
+
+p{
+  padding-block: 0.8rem;
+  font-size: 1rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.hidden{
+  display: none;
+}
+
+@media screen and (min-width: 1000px){
+
+  main{
+    width: 60rem;
+    height: 100%;
+      
+    padding: 3rem 1.2rem 3rem 1.2rem;
+    margin-right: 4rem;
+  
+    position: fixed;
+    left: calc(50vw - 16rem);
+
+    background-color: #121212;
+
+  }
+
+
+  nav{
+    height: 100vh;
+    width: 5rem;
+  
+    background-color: #121212;;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  
+    position: fixed;
+    left: calc(50vw - 45rem);
+  }
+
+  figure{
+    width: 24rem;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: calc(50vw - 40rem);
+    z-index: 10;
+  
+    
+  }
+
+  .bg-1000w{
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    z-index: -200;
+    background-color: black;
+  }
+
+}
+
+
+
