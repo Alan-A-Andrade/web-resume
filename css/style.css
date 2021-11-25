@@ -333,9 +333,19 @@ p{
   display: none;
 }
 
+.key-skills h2::before{
+  content: "";
+  display: block;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 0.2rem;
+  background-color: transparent;
+  }
+
 .key-skills h2::after{
 content: "";
 display: block;
+margin-bottom: 1rem;
 width: 100%;
 height: 0.2rem;
 background-color: #C22250;
@@ -352,12 +362,12 @@ background-color: #C22250;
 }
 
 .just-icons>div{
-  background-color: #C22250;
   display: flex;
   height: 4.5rem;
   width: 5rem;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
 }
 
@@ -373,10 +383,15 @@ background-color: #C22250;
   font-size: 4rem;
 }
 
+.just-icons img{
+  filter: invert(99%) sepia(14%) saturate(313%) hue-rotate(173deg) brightness(122%) contrast(96%);
+  width: 4rem;
+}
+
 .just-icons p{
 
   position: absolute;
-
+  text-align: center;
   
 }
 
@@ -395,6 +410,16 @@ background-color: #C22250;
   transition: 0.4s ease-in-out;
 }
 
+ul{
+  padding: 0px;
+  margin: 0px;
+}
+
+li{
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
 
 @media screen and (min-width: 65rem){
 
@@ -407,6 +432,7 @@ background-color: #C22250;
     left: calc(50vw - 16rem);
 
     background-color: #121212;
+    z-index: 1;
 
   }
 
@@ -426,6 +452,7 @@ background-color: #C22250;
   
     position: fixed;
     left: calc(50vw - 45rem);
+    z-index: 2;
   }
 
   figure{
@@ -441,12 +468,20 @@ background-color: #C22250;
     
   }
 
+  
+
   .bg-1000w{
     width: 100vw;
     height: 100vh;
     position: fixed;
-    z-index: -200;
+    z-index: 1;
     background-color: black;
+  }
+
+  .fog, .fog2 {
+    width: 60rem;
+    left: calc(50vw - 16rem);
+    z-index: 2;
   }
 
 }
