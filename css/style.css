@@ -49,6 +49,35 @@
   font-weight: bold;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 100%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #C22250; 
+  border-radius: 10px;
+
+}
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #C22250; 
+  opacity: 1;
+}
+
+::-webkit-scrollbar-corner{
+  background-color: transparent
+}
+
 
 html{
   font-family: 'JetBrainsMono';
@@ -62,8 +91,28 @@ body {
   font-size: 25px;
   display: flex;
   z-index: -15;
+  overflow: hidden;
 }
 
+
+.fog{
+
+  position: fixed;
+  width: 100vw;
+  height: 10rem;
+  background-image: linear-gradient(180deg,#121212, rgba(0,0,0,0));
+
+}
+
+.fog2{
+
+  position: fixed;
+  width: 100vw;
+  height: 20vh;
+  bottom: -1vh;
+  background-image: linear-gradient(0deg,#121212, rgba(0,0,0,0));
+
+}
 
 
 .dark-mode {
@@ -76,19 +125,9 @@ body {
   color: #121212 ;
 }
 
-header{
-  position: fixed;
-  width: 100vw;
-  top: 0vh;
-  padding: 10px 10px;
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 0.5rem;
 
-  z-index: 50;
-}
 
-header button{
+.theme{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,9 +140,11 @@ header button{
 
 }
 
-header button ion-icon{
+.theme ion-icon{
   font-size: 2rem;
 }
+
+
 
 
 nav{
@@ -118,8 +159,9 @@ nav{
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
-
+  z-index: 10;
   position: fixed;
+  background-color: #121212;
 }
 
 
@@ -159,14 +201,19 @@ nav .wrapper{
 figure{
   width: 24rem;
   height: 100vh;
-  overflow: hidden;
+
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  left: 5rem;
+  left: 4.9rem;
   z-index: 10;
+  overflow: hidden;
 
   
+}
+
+figure::-webkit-scrollbar {
+  width: 0px;
 }
 
 .selected{
@@ -178,7 +225,7 @@ figure{
   position: absolute;
   left: -75%;
   bottom: -5vw;
-
+  overflow: none;
   
 }
 
@@ -186,7 +233,8 @@ figure{
   position: absolute;
   height: 100vh;
   left: -100%;
-  bottom: 20%;
+  bottom: 0%;
+  overflow: none;
 
 
 }
@@ -195,44 +243,45 @@ figure{
   box-shadow: 0px 0.2rem 5px 0.5rem rgba(0,0,0,0.3);
 	transform: scale(1);
 	transition: 0.5s ease-in-out;
+  overflow: none;
 }
 .hover:hover{
   box-shadow: 0px 0.2rem 5px 1.5rem rgba(0,0,0,0.3);
 	transform: scale(1.05);
+  overflow: none;
 }
 
 .hover .avatar{
 	transform: scale(1);
-  transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+  overflow: none;
 }
+.hover:hover .avatar{
 
-.hover .avatar:hover{
-	transform: scale(0.90);
-
+	transform: scale(0.95);
+  overflow: none;
 }
 
 .hover .bg-avatar{
 	transform: scale(1);
-  transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+  overflow: none;
 }
-
 .hover:hover .bg-avatar{
-	transform: scale(1.1);
-  left: -100%;
-  bottom: 20%;
+
+	transform: scale(1.05);
+  overflow: none;
 }
 
 
 
 
 main{
-  width: calc(100vw - 30rem);
+  width: calc(100vw - 29rem);
   height: 100vh;
-  padding: 3rem 1.2rem 3rem 1.2rem;
-  margin-right: 4rem;
-
+  padding: 5rem 1rem;
   position: fixed;
-  left: 29rem;
+  right: 0rem;
   z-index: 0;
 
   display: flex;
@@ -244,21 +293,31 @@ main{
 
 }
 
+section:first-of-type{
+  padding-top: 1rem;
+}
 
-.about-me h1{
+section:last-of-type{
+  padding-bottom: 10rem;
+}
+
+
+
+
+main h1{
   font-size: 6rem;
   line-height: 4rem;
   padding: 1.5rem 0rem;
 }
 
-.about-me h2{
+Main h2{
   font-size: 1.5rem;
   line-height: 1.8rem;
   padding: 2rem 0rem;
   font-weight: lighter;
 }
 
-.about-me span{
+Main span{
  color: #C22250;
 
 }
@@ -274,16 +333,77 @@ p{
   display: none;
 }
 
-@media screen and (min-width: 1000px){
+.key-skills h2::after{
+content: "";
+display: block;
+width: 100%;
+height: 0.2rem;
+background-color: #C22250;
+}
+
+.key-skills h1{
+  display: flex;
+}
+
+.just-icons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.just-icons>div{
+  background-color: #C22250;
+  display: flex;
+  height: 4.5rem;
+  width: 5rem;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.just-icons>div>div{
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  z-index: 5;
+}
+
+.just-icons ion-icon{
+  font-size: 4rem;
+}
+
+.just-icons p{
+
+  position: absolute;
+
+  
+}
+
+.app-name{
+  top: 3rem;
+  position: absolute;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+
+.just-icons > div > div:hover ~ .app-name{
+  top: 3.5rem;
+  position: absolute;
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+
+
+@media screen and (min-width: 65rem){
 
   main{
     width: 60rem;
     height: 100%;
       
-    padding: 3rem 1.2rem 3rem 1.2rem;
-    margin-right: 4rem;
   
-    position: fixed;
+
     left: calc(50vw - 16rem);
 
     background-color: #121212;
@@ -315,7 +435,7 @@ p{
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    left: calc(50vw - 40rem);
+    left: calc(50vw - 40.1rem);
     z-index: 10;
   
     
@@ -323,7 +443,7 @@ p{
 
   .bg-1000w{
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     position: fixed;
     z-index: -200;
     background-color: black;
@@ -332,4 +452,16 @@ p{
 }
 
 
+@media screen and (max-width: 900px){
 
+figure{
+  display: none;
+}
+
+
+main{
+  left: 5rem;
+  width: Calc(100vw - 5rem);
+}
+
+}
