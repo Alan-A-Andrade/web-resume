@@ -15,6 +15,7 @@ const arrayIcons = Array.from(nodeIcons);
 function scrollToArticle(element) {
 
     const index = arrayIcons.indexOf(element)
-    arraySections[index].scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" })
+    console.log(index)
+    arraySections[index].scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
 
 }

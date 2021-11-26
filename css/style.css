@@ -114,8 +114,8 @@ html{
 }
 
 .article-padding{
-  height: 50vh;
-  width: 50vw;
+  height: 150vh;
+  width: 10vw;
 }
 
 p{
@@ -185,6 +185,8 @@ gap: 1rem;
 main{
   width: 70rem;
   height: 100%;
+  position: fixed;
+  top: 5rem;
 
   display: flex;
   flex-wrap: wrap;
