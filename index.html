@@ -20,15 +20,14 @@
     <div class="background-degrade"></div>
     <div class="wrapper">
         <nav class="dark-mode">
-            <ion-icon onclick="openMenuSmallDivices()" class="dk-mark-element" name="menu-outline">
+            <ion-icon class="dk-mark-element" name="menu-outline">
             </ion-icon>
             <div class="wrapper-menu menu-animation">
-                <ion-icon class="selected" title="About Me" name="person-outline"></ion-icon>
-                <ion-icon title="Key Skills" name="hammer-outline"></ion-icon>
-                <ion-icon title="Work Experience" name="briefcase-outline"></ion-icon>
-                <ion-icon title="Education" name="school-outline"></ion-icon>
-                <ion-icon title="Hobbies and other informations" name="game-controller-outline"></ion-icon>
-                <ion-icon title="Contact" name="call-outline"></ion-icon>
+                <ion-icon onclick="scrollToArticle(this)" title="About Me" name="person-outline"></ion-icon>
+                <ion-icon onclick="scrollToArticle(this)" title="Key Skills" name="hammer-outline"></ion-icon>
+                <ion-icon onclick="scrollToArticle(this)" title="Work Experience" name="briefcase-outline"></ion-icon>
+                <ion-icon onclick="scrollToArticle(this)" title="Education" name="school-outline"></ion-icon>
+                <ion-icon onclick="scrollToArticle(this)" title="Contact" name="call-outline"></ion-icon>
             </div>
             <ion-icon name="download-outline"></ion-icon>
         </nav>
@@ -38,12 +37,20 @@
                 <img src="./assets/pictures/Background.jpg" alt="responsive Background Picture">
             </figure>
             <section class="dark-mode">
-                <figure></figure>
+                <figure class="avatar-round">
+                    <div class="photo-container">
+                        <img class="avatar-round-bg" src="./assets/pictures/Background.jpg" alt="">
+                        <div class="half-circle-1"></div>
+                        <img class="avatar-round-picture" src="./assets/pictures/alan_withAlpha.png" alt="">
+                        <div class="half-circle-2"></div>
+                    </div>
+                </figure>
                 <article class="about-me">
                     <h1>About <dk-mark-text>Me</dk-mark-text>
                     </h1>
                     <h2>
-                        <dk-mark-text>28 years</dk-mark-text> / <dk-mark-text>Rio de Janeiro, Brazil</dk-mark-text> /
+                        <dk-mark-text>28 years</dk-mark-text>
+                        <dk-mark-text>Rio de Janeiro, Brazil</dk-mark-text>
                         <dk-mark-text>Programmer</dk-mark-text>
                     </h2>
                     <p>Creative, flexible and fast learner. I strive to effectively act as a problem solver
@@ -224,10 +231,22 @@
                         </h2>
                         <p>Centro Federal de Educação Tecnológica Celso Suckow da Fonseca</p>
                     </section>
+                </article>
+                <article class="contact-info">
+                    <h1>Contact <dk-mark-text>Info</dk-mark-text>
+                    </h1>
+                    <div class="wrapper-contact">
+                        <ion-icon onclick="sendToHyperLink(`https://www.linkedin.com/in/alan-de-andrade/`)"
+                            name="logo-linkedin"></ion-icon>
+                        <img onclick="sendToHyperLink(`https://github.com/Alan-A-Andrade`)"
+                            src="./assets/icons/github.svg" alt="">
+                        <ion-icon onclick="sendToHyperLink('mailto:alanaa92@gmail.com')" name="mail-outline">
+                        </ion-icon>
+                    </div>
 
                 </article>
                 <article></article>
-                <article></article>
+                <article class="article-padding"></article>
             </section>
         </main>
     </div>

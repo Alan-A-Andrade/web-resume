@@ -106,10 +106,20 @@ html{
   font-family: 'JetBrainsMono';
   font-size: 12px;
   font-style: normal;
+  overflow: hidden;
+}
+
+.body{
+  overflow: hidden;
+}
+
+.article-padding{
+  height: 50vh;
+  width: 50vw;
 }
 
 p{
-  font-family: 'Source Serif Pro', serif; !important
+  font-family: 'Source Serif Pro', serif;
 }
   
 .wrapper{
@@ -180,7 +190,7 @@ main{
   flex-wrap: wrap;
 }
 
-figure{
+main>figure{
   width: 20rem;
   height: 120%;
 
@@ -195,19 +205,19 @@ figure{
   align-items: flex-end;
 }
 
-figure:hover{
+main>figure:hover{
   transform: scale(1.05);
   box-shadow: 0px 0.2rem 1rem 1.5rem rgba(0,0,0,0.3);
 }
 
-figure img:first-of-type{
+main>figure img:first-of-type{
   z-index: 0;
   height: 70%;
   transition: 0.5s ease-in-out;
   
 }
 
-figure img:last-of-type{
+main>figure img:last-of-type{
   height: 100%;
 
   position: absolute;
@@ -217,12 +227,12 @@ figure img:last-of-type{
   transition: 0.5s ease-in-out;
 }
 
-figure:hover img:first-of-type{
+main>figure:hover img:first-of-type{
   transform: scale(0.90);
 
 }
 
-figure:hover img:last-of-type{
+main>figure:hover img:last-of-type{
   transform: scale(1.05);
 
 }
@@ -270,7 +280,15 @@ section p{
 
 }
 
+.about-me h2 dk-mark-text:not(.about-me h2 dk-mark-text:last-child)::after{
+  content: "/";
+  display: inline-block;
+  color: #fafafa;
+  margin: 0rem 0.5em;
+}
+
 .key-skills h2{
+font-size: 1.8rem;
 margin-top: 0.5rem;
 }
 
@@ -374,13 +392,13 @@ opacity: 0;
 
 
 .background-degrade{
-  width: 80rem;
+  width: 70rem;
   height: 5rem;
   position: fixed;
   top: -1px;
   left: calc( ( 100vw - 70rem) / 2 );
   z-index: 5;
-  background-image: linear-gradient(180deg,#121212, rgba(0,0,0,0));
+  background-image: linear-gradient(180deg,#121212 10%, rgba(0,0,0,0));
 }
 
 .background-degrade:last-of-type{
@@ -403,7 +421,7 @@ li::before {
 }
 
 li{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.2em;
 }
 
@@ -560,9 +578,27 @@ flex-direction: column;
   padding-top: 1rem;
 }
 
+.wrapper-contact{
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
 .education{
   position: relative;
 }
+
+.contact-info ion-icon{
+  font-size: 5rem;
+}
+
+.contact-info img{
+  width: 4.5em;
+  filter: invert(94%) sepia(28%) saturate(0%) hue-rotate(180deg) brightness(104%) contrast(96%);
+}
+
 
 @media screen and (max-device-width: 60rem){
 
@@ -577,11 +613,11 @@ flex-direction: column;
 
     width: 100%;
     flex-direction: row;
-    padding: 1rem;
+    padding: 0 1rem;
     background-color: #121212;
   }
 
-  figure{
+  main>figure{
     display: none;
   }
    
@@ -601,7 +637,6 @@ flex-direction: column;
     height: 300px;
     z-index: 0;
     box-shadow: unset;
-    background-color: #C22250;
   }
 
   .wrapper>nav{
@@ -619,62 +654,169 @@ flex-direction: column;
     font-size: 0.8em;
     position: fixed;
     top: 5rem;
-    width: 5rem;
-    height: 100%;
+    width: 100vw;
+    height: 5rem;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
+    flex-basis:30%;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1rem;
     background-color: #121212e8;
     transition: 0.5s ease-in-out;
-    left: 0px;
+    left: -100vw;
+    overflow: scroll;
+    box-shadow: 0px 1rem 0.5rem 0rem rgba(0,0,0,0.6);
   }
 
-  .wrapper-menu ion-icon{
-    
-  }
-
-  .menu-animation{
-    left: -5rem !important;
-  }
-
-  .menu-icons-animation{
-      position: fixed;
-      top: -10rem;
+ 
+  nav ion-icon:first-of-type:hover ~ .wrapper-menu{
+    left: 0px !important;
   }
 
   /* width */
-::-webkit-scrollbar {
-display: none;
-}
+  ::-webkit-scrollbar {
+  display: none;
+  }
 
-.wrapper-expirience{
+  .wrapper-expirience{
 
-  width: 100%;
-  height: max-content !important;
-}
+    width: 100%;
+    height: max-content !important;
+  }
 
-section h1{
-  font-size: 4rem ;
-  line-height: 1em;
-}
+  section h1{
+    font-size: 4rem ;
+    line-height: 1em;
+  }
 
-section h1{
-  line-height: 1em;
-}
+  section h1{
+    line-height: 1em;
+  }
 
-section p{
-  font-size: 1.1rem;
-  line-height: 1.1em;
+  section p{
+    font-size: 1.1rem;
+    line-height: 1.1em;
 
-  text-align: justify;
-  word-break: auto;
-  text-justify: inter-ideograph;
+    text-align: justify;
+    word-break: auto;
+    text-justify: inter-ideograph;
 
-  padding: 0.5em 0em;
+    padding: 0.5em 0em;
 
-}
+  }
+
+  .line-timeline{
+    height: 28rem;
+  }
+
+  .timeline-start{
+    height: 150%;
+  }
+
+  .timeline-end{
+    top: -140%;
+    height: 150%;
+  }
+
+  .about-me h1{
+    margin: 0;
+    padding: 1rem;
+    line-height: 1rem;
+  }
+
+  .about-me h2{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0.5rem;
+  }
+
+  .about-me h2 dk-mark-text:not(.about-me h2 dk-mark-text:last-child)::after{
+    content: "";
+    display: inline-block;
+    color: #fafafa;
+    margin: 0rem 0.5em;
+  }
+
+  .about-me h2>dk-mark-text::before{
+    content: "\25A0";
+    font-size: 1rem;
+    color:#fafafa;
+    font-weight: bold; 
+    display: inline-block;
+    margin: 1em;
+
+  }
+
+  .wrapper-text-experience p{
+    padding: 0.5rem 0rem;
+    margin: 0;
+  }
+
+  .wrapper-text-experience h2{
+    padding: 0;
+    line-height: 1em;
+    margin: 1rem 0;
+  }
+
+  .avatar-round{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .photo-container{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: transparent;
+    width: 20rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .avatar-round-picture{
+    position: absolute;
+    width: 40rem;
+    left: -10rem;
+  }
+
+  .avatar-round-bg{
+    z-index: 0;
+    height: 100%;
+  }
+  
+  .half-circle-1 {
+    width: 20rem;
+    height: 10rem; /* as the half of the width */
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 10rem;
+    border: 1rem solid #fafafa;
+    border-bottom: 0;
+  
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .half-circle-2 {
+    width: 20rem;
+    height: 10rem; /* as the half of the width */
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    border: 1rem solid #fafafa;
+    border-top: 0;
+  
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .background-degrade{
+    height: 10rem;
+  }
 
 }
