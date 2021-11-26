@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -7,155 +7,235 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Alan's Resume</title>
-    <link rel="icon" href="assets/favIcon" type=image/x-icon />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!--<link rel="icon" href="assets/favIcon" type=image/x-icon />-->
 
 </head>
 
-<body class="dark-mode">
-
-    <!--
-    <header>
-        <button class="theme" onclick="darkMode(this)">
-            <ion-icon class="hidden" name="moon"></ion-icon>
-            <ion-icon name="sunny"></ion-icon>
-        </button>
-    </header>
-    -->
-    <div class="bg-1000w"></div>
-
-    <nav title="Navigation">
-        <ion-icon name="menu-outline"></ion-icon>
-        <button class="theme hidden" onclick="darkMode(this)">
-            <ion-icon class="hidden" name="moon"></ion-icon>
-            <ion-icon name="sunny"></ion-icon>
-        </button>
-        <div class="wrapper">
-            <ion-icon class="selected" title="About Me" name="person-outline"></ion-icon>
-            <ion-icon title="Key Skills" name="hammer-outline"></ion-icon>
-            <ion-icon title="Work Experience" name="briefcase-outline"></ion-icon>
-            <ion-icon title="Education" name="school-outline"></ion-icon>
-            <ion-icon title="Hobbies and other informations" name="game-controller-outline"></ion-icon>
-            <ion-icon title="Contact" name="call-outline"></ion-icon>
-        </div>
-    </nav>
-    <figure class="hover">
-        <img class="bg-avatar" src="./assets/pictures/Background.jpg" alt="">
-        <img class="avatar" src="./assets/pictures/alan_withAlpha.png" alt="">
-
-    </figure>
-    <main>
-        <section class="about-me">
-            <h1>About <span>Me</span></h1>
-            <h2><span>28 years</span> / <span>Rio de Janeiro, Brazil</span> / <span>Programmer</span></h2>
-            <p>Creative, flexible and with fast learning. I strive to effectively act as a problem solver help of
-                programming, data science, with a focus on quality and continuous improvement.</p>
-            <p>Volutering as projet coordinator of Agroprata, which aimed at the economic growth of a organic farms
-                community, worked as Strategic Procurement Analysty, where I apply the Strategic Sourcing
-                methodology to
-                gain direct and indirect benefits in the purchase process.</p>
-            <p>As now i'm a student at Driven Full Stack Developer Bootcamp, in order to follow my passion for
-                logic,
-                problem solving and tecnology.</p>
-        </section>
-        <section class="key-skills">
-            <h1>Key<span>&nbspSkills</span></h1>
-            <h2>Programming Languages</h2>
-            <div class="just-icons">
-                <div>
-                    <div></div>
-                    <ion-icon name="logo-html5"></ion-icon>
-                    <p class="app-name">HTML5</p>
-                </div>
-                <div>
-                    <div></div>
-                    <ion-icon name="logo-css3"></ion-icon>
-                    <p class="app-name">CSS3</p>
-                </div>
-                <div>
-                    <div></div>
-                    <ion-icon name="logo-javascript"></ion-icon>
-                    <p class="app-name">JavaScript</p>
-                </div>
-                <div>
-                    <div></div>
-                    <img src="./assets/icons/microsoftexcel.svg" alt="">
-                    <p class="app-name">VBA</p>
-                </div>
+<body class="">
+    <div class="background-degrade"></div>
+    <div class="wrapper">
+        <nav class="dark-mode">
+            <ion-icon onclick="openMenuSmallDivices()" class="dk-mark-element" name="menu-outline">
+            </ion-icon>
+            <div class="wrapper-menu menu-animation">
+                <ion-icon class="selected" title="About Me" name="person-outline"></ion-icon>
+                <ion-icon title="Key Skills" name="hammer-outline"></ion-icon>
+                <ion-icon title="Work Experience" name="briefcase-outline"></ion-icon>
+                <ion-icon title="Education" name="school-outline"></ion-icon>
+                <ion-icon title="Hobbies and other informations" name="game-controller-outline"></ion-icon>
+                <ion-icon title="Contact" name="call-outline"></ion-icon>
             </div>
-            <h2>Database Management</h2>
-            <div class="just-icons">
-                <div>
-                    <div></div>
-                    <img src="./assets/icons/sap.svg" alt="">
-                    <p class="app-name">SAP ERP</p>
-                </div>
-            </div>
-            <h2>Design</h2>
-            <div class="just-icons">
-                <div>
-                    <div></div>
-                    <img src="./assets/icons/adobeaftereffects.svg" alt="">
-                    <p class="app-name">After Effects</p>
-                </div>
-                <div>
-                    <div></div>
-                    <img src="./assets/icons/adobeillustrator.svg" alt="">
-                    <p class="app-name">Adobe Illustrator</p>
-                </div>
-                <div>
-                    <div></div>
-                    <img src="./assets/icons/adobephotoshop.svg" alt="">
-                    <p class="app-name">Adobe Photoshop</p>
-                </div>
-            </div>
-            <h2>Languages</h2>
-            <ul>
-                <li>Portugues <span>Native</span></li>
-                <li>English <span>Fluent</span></li>
-            </ul>
+            <ion-icon name="download-outline"></ion-icon>
+        </nav>
+        <main>
+            <figure>
+                <img src="./assets/pictures/alan_withAlpha.png" alt="Photo of Alan de Andrade">
+                <img src="./assets/pictures/Background.jpg" alt="responsive Background Picture">
+            </figure>
+            <section class="dark-mode">
+                <figure></figure>
+                <article class="about-me">
+                    <h1>About <dk-mark-text>Me</dk-mark-text>
+                    </h1>
+                    <h2>
+                        <dk-mark-text>28 years</dk-mark-text> / <dk-mark-text>Rio de Janeiro, Brazil</dk-mark-text> /
+                        <dk-mark-text>Programmer</dk-mark-text>
+                    </h2>
+                    <p>Creative, flexible and fast learner. I strive to effectively act as a problem solver
+                        using programming, data science, focused quality and continuous
+                        improvement.</p>
+                    <p>I've volunteered as projet coordinator of Agroprata, which aimed at the sustainable economic
+                        growth of a
+                        organic farms community, I've also worked as Strategic Procurement Analysty, where I apply
+                        the Strategic
+                        Sourcing
+                        methodology to gain direct and indirect benefits in the purchase process.</p>
+                    <p>As now i'm a student at Driven Full Stack Developer Bootcamp, in order to follow my passion
+                        for
+                        logic,
+                        problem solving and tecnology.</p>
+
+
+                </article>
+                <article class="key-skills">
+                    <h1>Key <dk-mark-text>Skills</dk-mark-text>
+                    </h1>
+                    <h2>Programming Languages</h2>
+                    <div class="just-icons pLang">
+                        <div>
+                            <div></div>
+                            <ion-icon name="logo-html5"></ion-icon>
+                            <p class="app-name">HTML5</p>
+                        </div>
+                        <div>
+                            <div></div>
+                            <ion-icon name="logo-css3"></ion-icon>
+                            <p class="app-name">CSS3</p>
+                        </div>
+                        <div>
+                            <div></div>
+                            <ion-icon name="logo-javascript"></ion-icon>
+                            <p class="app-name">JavaScript</p>
+                        </div>
+                    </div>
+                    <h2>Database Management</h2>
+                    <div class="just-icons dataM">
+                        <div>
+                            <div></div>
+                            <img src="./assets/icons/sap.svg" alt="">
+                            <p class="app-name">&nbspERP&nbsp|&nbspSRM</p>
+                        </div>
+                    </div>
+                    <h2>Design</h2>
+                    <div class="just-icons dSign">
+                        <div>
+                            <div></div>
+                            <img src="./assets/icons/adobeaftereffects.svg" alt="">
+                            <p class="app-name">After Effects</p>
+                        </div>
+                        <div>
+                            <div></div>
+                            <img src="./assets/icons/adobeillustrator.svg" alt="">
+                            <p class="app-name">Adobe Illustrator</p>
+                        </div>
+                    </div>
+                    <h2>Languages</h2>
+                    <ul>
+                        <li>Portugues <dk-mark-text>Native</dk-mark-text>
+                        </li>
+                        <li>English <dk-mark-text>Fluent</dk-mark-text>
+                        </li>
+                    </ul>
+
+                </article>
+                <article class="work-experience">
+                    <h1>Work <dk-mark-text>Experience</dk-mark-text>
+                    </h1>
+                    <section class="wrapper-expirience">
+                        <div class="layout-timeline">
+                            <div class="data-timeline">
+                                <h2>2021</h2>
+                                <h2>2019</h2>
+                            </div>
+                            <div class="line-timeline timeline-start"></div>
+                            <div class="bullet-timeline"></div>
+                        </div>
+                        <div class="wrapper-text-experience">
+                            <h1>Procurement Analyst</h1>
+                            <h2>VALE S.A.</h2>
+                            <p>Currently working as Strategic Procurement Analyst,
+                                where I apply the Strategic Sourcing methodology, from
+                                demand planning, market research, supplier relationship
+                                management, market strategy, commercial negotiations
+                                and logistics of delivery and payment, with the goal to
+                                gain direct and indirect benefits in the purchase process.
+                                Also working as sponsor of the VALE Production System,
+                                utilizing data analysis, development of dashboards in
+                                Power BI, action plan for continuous improvement and
+                                quality assurance in purchasing processes</p>
+                        </div>
+                    </section>
+                    <section class="wrapper-expirience">
+                        <div class="layout-timeline">
+                            <div class="data-timeline">
+                                <h2>2016</h2>
+                                <h2>2016</h2>
+                            </div>
+                            <div class="line-timeline"></div>
+                            <div class="bullet-timeline"></div>
+                        </div>
+                        <div class="wrapper-text-experience">
+                            <h1>Engineering Researcher Intern</h1>
+                            <h2>llinois Institute of Technoloty</h2>
+                            <p>Worked with the development and application of
+                                statistical methods and current industry innovations to
+                                improve the efficiency of the IIT University of Chicago’s
+                                cooling plant facilities.</p>
+                        </div>
+                    </section>
+                    <section class="wrapper-expirience">
+                        <div class="layout-timeline">
+                            <div class="data-timeline">
+                                <h2>2015</h2>
+                                <h2>2013</h2>
+                            </div>
+                            <div class="line-timeline"></div>
+                            <div class="bullet-timeline"></div>
+                        </div>
+                        <div class="wrapper-text-experience">
+                            <h1>Project Coordinator </h1>
+                            <h2>Enactus - Non profit organization</h2>
+                            <p>Coordinator of the Agroprata project, which aimed at the
+                                economic growth of organic producers in the Pedra
+                                Branca community. The project won the 2014 National
+                                Competition and was presented at the World
+                                Competition in Beijing, China.</p>
+                        </div>
+                    </section>
+                    <section class="wrapper-expirience">
+                        <div class="layout-timeline">
+                            <div class="data-timeline">
+                                <h2>2012</h2>
+                                <h2>2011</h2>
+                            </div>
+                            <div class="line-timeline timeline-end"></div>
+                            <div class="bullet-timeline"></div>
+                        </div>
+                        <div class="wrapper-text-experience">
+                            <h1>Mechanical Technician Intern</h1>
+                            <h2>Grupo Michelin LTDA.</h2>
+                            <p>Internship at Michelin factory in Brazil in its maintenance
+                                area, where I worked on the maintenance schedule
+                                planning, worked on preventive and corrective
+                                maintenance, as well as developing technical
+                                documentation for equipment.</p>
+                        </div>
+                    </section>
 
 
 
+                </article>
+                <article class="education">
+                    <h1>Educat<dk-mark-text>io</dk-mark-text>n</h1>
+                    <section class="wrapper-education">
+                        </h1>
+                        <h2>2012 - 2019 | <dk-mark-text>Bachelor</dk-mark-text>
+                            <h1>Mechanical Engineer</h1>
+                        </h2>
+                        <p>Centro Federal de Educação Tecnológica Celso Suckow da Fonseca</p>
+                    </section>
+                    <section class="wrapper-education">
+                        </h1>
+                        <h2>2015 - 2016 | <dk-mark-text>SWB Exchange Program </dk-mark-text>
+                            <h1>Mechanical Engineer</h1>
+                        </h2>
+                        <p>Western New England University (Massachusetts, USA)</p>
+                        <p>Illinois institute of Technology (Illinois, USA)</p>
+                    </section>
+                    <section class="wrapper-education">
+                        </h1>
+                        <h2>2008 - 2010 | <dk-mark-text>Technician</dk-mark-text>
+                            <h1>Industrial Mechanic</h1>
+                        </h2>
+                        <p>Centro Federal de Educação Tecnológica Celso Suckow da Fonseca</p>
+                    </section>
 
-        </section>
-        <section>
-            <h1>Work Experience</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veniam consectetur exercitationem
-                voluptates accusantium debitis nemo dolor molestiae totam, amet iste, ad necessitatibus sit quo
-                culpa
-                sunt, impedit laudantium aliquam!</p>
-        </section>
-        <section>
-            <h1>Education</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veniam consectetur exercitationem
-                voluptates accusantium debitis nemo dolor molestiae totam, amet iste, ad necessitatibus sit quo
-                culpa
-                sunt, impedit laudantium aliquam!</p>
-        </section>
-        <section>
-            <h1>Hobbies</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veniam consectetur exercitationem
-                voluptates accusantium debitis nemo dolor molestiae totam, amet iste, ad necessitatibus sit quo
-                culpa
-                sunt, impedit laudantium aliquam!</p>
-        </section>
-        <section>
-            <h1>Contact</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error veniam consectetur exercitationem
-                voluptates accusantium debitis nemo dolor molestiae totam, amet iste, ad necessitatibus sit quo
-                culpa
-                sunt, impedit laudantium aliquam!</p>
-        </section>
-    </main>
+                </article>
+                <article></article>
+                <article></article>
+            </section>
+        </main>
+    </div>
+    <div class="background-degrade"></div>
 
-    <div class="fog"></div>
-    <div class="fog2"></div>
-
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./script/js.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
