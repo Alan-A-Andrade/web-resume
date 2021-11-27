@@ -99,9 +99,6 @@ highlight{
   color: #121212;
 }
 
-
-
-
 html{
   font-family: 'JetBrainsMono';
   font-size: 12px;
@@ -131,18 +128,29 @@ p{
   background: black;
 }
 
+a{
+  position: fixed;
+  bottom: 0px;
+  width: 5rem;
+  height: 5rem;
+  background-color: transparent;
+}
+
 nav{
   width: 5rem;
   height: 100%;
   flex-shrink: 0;
   flex-grow: 0;
-  z-index: 10;
+  z-index: 0;
   font-size: 4rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  left: calc(50vw - 40rem);
+  
 }
 
 nav > ion-icon{
@@ -152,7 +160,7 @@ nav > ion-icon{
   transition: 0.2s ease-in-out;
 }
 
-nav > ion-icon:not(:first-of-type):hover{
+#download{
 
   padding: 0.5rem;
   --ionicon-stroke-width: 1.5rem;
@@ -186,9 +194,7 @@ main{
   width: 70rem;
   height: 100%;
   position: fixed;
-  top: 5rem;
-
-  display: flex;
+   display: flex;
   flex-wrap: wrap;
 }
 
@@ -197,7 +203,7 @@ main>figure{
   height: 120%;
 
   display: flex;
-  z-index: 15; 
+  z-index: 25; 
   position: relative;
   overflow: hidden;
   box-shadow: 0px 0.2rem 0.5rem 1rem rgba(0,0,0,0.6);
@@ -236,12 +242,7 @@ main>figure:hover img:first-of-type{
 
 main>figure:hover img:last-of-type{
   transform: scale(1.05);
-
 }
-
-
-
-
 
 section{
   width: 50rem;
@@ -320,8 +321,7 @@ margin-top: 0.5rem;
 
   position: relative;
 
-  transition: 0.25s ease-in-out;
-  
+  transition: 0.25s ease-in-out; 
 }
 
 .just-icons>div>p{
@@ -394,12 +394,12 @@ opacity: 0;
 
 
 .background-degrade{
-  width: 70rem;
+  width: 50rem;
   height: 5rem;
   position: fixed;
   top: -1px;
-  left: calc( ( 100vw - 70rem) / 2 );
-  z-index: 5;
+  left: calc( ( 100vw - 30rem) / 2 );
+  z-index: 2;
   background-image: linear-gradient(180deg,#121212 10%, rgba(0,0,0,0));
 }
 
@@ -433,7 +433,7 @@ article{
 
 }
 
-section>figure{
+.photo-container{
   display: none;
 }
 
@@ -447,10 +447,6 @@ section>figure{
   overflow: visible;
 }
 
-
-.work-experience>h1{
-  padding: 5rem 0rem 0rem 0rem;
-}
 
 .wrapper-expirience h1{
   font-size: 2rem;
@@ -471,6 +467,7 @@ section>figure{
 }
 
 .wrapper-expirience p{
+  width: 41.7rem;
   font-size: 1.2rem;
   line-height: 1em;
   display: inline-block;
@@ -543,6 +540,7 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
   height: unset;
+  width: 40rem;
   padding: 2rem 2rem;
 }
 
@@ -567,10 +565,10 @@ flex-direction: column;
   line-height: 1em;
 }
 
-.wrapper-education::before{
+.wrapper-education h2::before{
   content: "";
-  width: 0.3rem;
-  height: 3rem;
+  width: 0.4rem;
+  height: 2.9rem;
   font-size: 1rem;
   background-color: #C22250;
   font-weight: bold; 
@@ -579,6 +577,7 @@ flex-direction: column;
   left: 1rem;
   padding-top: 1rem;
 }
+
 
 .wrapper-contact{
   height: 7rem;
@@ -602,6 +601,7 @@ flex-direction: column;
 }
 
 
+
 @media screen and (max-device-width: 60rem){
 
   
@@ -617,6 +617,14 @@ flex-direction: column;
     flex-direction: row;
     padding: 0 1rem;
     background-color: #121212;
+    top: 5rem;
+    position: fixed;
+  }
+
+  nav{
+    position: unset;
+    left: unset;
+    z-index: 10;
   }
 
   main>figure{
@@ -663,7 +671,7 @@ flex-direction: column;
     flex-direction: row;
     flex-basis:30%;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-around;
     gap: 1rem;
     background-color: #121212e8;
     transition: 0.5s ease-in-out;
@@ -683,12 +691,39 @@ flex-direction: column;
   }
 
   .wrapper-expirience{
-
     width: 100%;
-    height: max-content !important;
+  }
+
+  .bug-1{
+    position: relative;
+  }
+
+  .bug-2{
+    position: absolute;
+    top: 1.5em;
+    left: 0;
+  }
+
+  .wrapper-expirience h1{
+    display: inline;
+  }
+
+
+  .wrapper-text-experience h2{
+    padding: 0px !important;
+    margin: 0px !important;
+    line-height: 1rem;
+  }
+
+  .wrapper-text-experience p{
+    width: calc(100vw - 9.5rem);
+    padding: 1rem 0px 0px 0px !important;
+    margin: 1rem 0px 0px 0px !important;
+    line-height: 1.2rem;
   }
 
   section h1{
+    margin-top: 5rem;
     font-size: 4rem ;
     line-height: 1em;
   }
@@ -710,7 +745,7 @@ flex-direction: column;
   }
 
   .line-timeline{
-    height: 28rem;
+    height: 26rem;
   }
 
   .timeline-start{
@@ -718,13 +753,13 @@ flex-direction: column;
   }
 
   .timeline-end{
-    top: -140%;
-    height: 150%;
+    bottom: 0rem;
+    height: 6rem;
   }
 
   .about-me h1{
     margin: 0;
-    padding: 1rem;
+    padding: 1rem 0px;
     line-height: 1rem;
   }
 
@@ -757,13 +792,15 @@ flex-direction: column;
     margin: 0;
   }
 
-  .wrapper-text-experience h2{
+  .wrapper-text-experience h1{
+    font-size: 1.2rem;
     padding: 0;
     line-height: 1em;
-    margin: 1rem 0;
+    margin: 0 0 1rem 0;
   }
 
   .avatar-round{
+    padding: 4rem 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -778,6 +815,7 @@ flex-direction: column;
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
+    backface-visibility: hidden;
   }
   
   .avatar-round-picture{
@@ -789,6 +827,8 @@ flex-direction: column;
   .avatar-round-bg{
     z-index: 0;
     height: 100%;
+    bottom: 10vh;
+  
   }
   
   .half-circle-1 {
@@ -819,6 +859,21 @@ flex-direction: column;
 
   .background-degrade{
     height: 10rem;
+    width: 100%;
+    left: 0px;
   }
 
+  .wrapper-education{
+    padding: 2rem;
+    width: 90vw;
+  }
+
+  a{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+  }
 }

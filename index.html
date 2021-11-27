@@ -29,7 +29,9 @@
                 <ion-icon onclick="scrollToArticle(this)" title="Education" name="school-outline"></ion-icon>
                 <ion-icon onclick="scrollToArticle(this)" title="Contact" name="call-outline"></ion-icon>
             </div>
-            <ion-icon name="download-outline"></ion-icon>
+
+            <ion-icon id="download" name="download-outline"></ion-icon>
+            <a href="./assets/pdf/Alan de Andrade CV Ingles.pdf" download="Resume"></a>
         </nav>
         <main>
             <figure>
@@ -37,15 +39,16 @@
                 <img src="./assets/pictures/Background.jpg" alt="responsive Background Picture">
             </figure>
             <section class="dark-mode">
-                <figure class="avatar-round">
-                    <div class="photo-container">
-                        <img class="avatar-round-bg" src="./assets/pictures/Background.jpg" alt="">
-                        <div class="half-circle-1"></div>
-                        <img class="avatar-round-picture" src="./assets/pictures/alan_withAlpha.png" alt="">
-                        <div class="half-circle-2"></div>
-                    </div>
-                </figure>
+
                 <article class="about-me">
+                    <figure class="avatar-round">
+                        <div class="photo-container">
+                            <img class="avatar-round-bg" src="./assets/pictures/Background.jpg" alt="">
+                            <div class="half-circle-1"></div>
+                            <img class="avatar-round-picture" src="./assets/pictures/alan_withAlpha.png" alt="">
+                            <div class="half-circle-2"></div>
+                        </div>
+                    </figure>
                     <h1>About <dk-mark-text>Me</dk-mark-text>
                     </h1>
                     <h2>
@@ -121,7 +124,7 @@
 
                 </article>
                 <article class="work-experience">
-                    <h1>Work <dk-mark-text>Experience</dk-mark-text>
+                    <h1 class="bug-1">Work <dk-mark-text class="bug-2">Experience</dk-mark-text>
                     </h1>
                     <section class="wrapper-expirience">
                         <div class="layout-timeline">
